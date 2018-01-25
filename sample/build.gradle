@@ -14,70 +14,6 @@ android {
     }
 }
 
-ext {
-    PUBLISH_GROUP_ID = 'id.voela'
-    PUBLISH_ARTIFACT_ID = 'iduang'
-    PUBLISH_VERSION = '0.0.1'
-
-    bintrayRepo = 'IDUang'
-    bintrayName = 'IDUang'
-
-    publishedGroupId = 'id.voela'
-    libraryName = 'IDUang'
-    artifact = 'IDUang'
-
-    libraryDescription = 'A simple libs for Parsing IDR currency'
-
-    siteUrl = 'https://github.com/pahlevikun/IDUang'
-    gitUrl = 'https://github.com/pahlevikun/IDUang.git'
-
-    libraryVersion = '0.0.1'
-
-    developerId = 'voela'
-    developerName = 'Voela'
-    developerEmail = 'pahlevi.lun@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
-//install{
-//    repositories.mavenInstaller {
-//        pom{
-//            project{
-//                packaging 'aar'
-//                groupID publishedGroupId
-//                artifactID  artifact
-//
-//                name libraryName
-//                description libraryDescription
-//                url siteUrl
-//
-//                licenses {
-//                    license {
-//                        name licenseName
-//                        url licenseUrl
-//                    }
-//                }
-//
-//                developers{
-//                    developer{
-//                        id developerId
-//                        name developerName
-//                        email developerEmail
-//                    }
-//                }
-//
-//                scm{
-//                    connection gitUrl
-//                    developerConnection gitUrl
-//                    url siteUrl
-//                }
-//            }
-//        }
-//    }
-//}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -85,6 +21,6 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
-    implementation project(':iduangs')
+    implementation 'com.github.pahlevikun:iduang:0.0.1'
 
 }
